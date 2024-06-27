@@ -10,6 +10,8 @@ const settingsStrengthEls = [
 ];
 const generateBtn = document.querySelector("#generateBtn");
 const passwordInput = document.querySelector("#passwordInput");
+const copySign = document.querySelector(".password-generator__copy-sign");
+const modalCopied = document.querySelector(".modal");
 
 range.addEventListener("input", () => {
   rangeValue.innerHTML = range.value;
@@ -123,4 +125,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 generateBtn.addEventListener("click", () => {
   passwordInput.value = randomPass(range.value);
+});
+
+copySign.addEventListener("click", () => {
+  const password = passwordInput.value;
+  if (password) {
+    navigator.clipboard
+      .writeText(password)
+      .then(() => {
+        modalCopied.classList.add("display-block");
+        setTimeout(() => {
+          modalCopied.classList.remove("display-block");
+        }, 3000);
+        console.log("CCCOOOOOPPPIIIEEEDDD!!!");
+      })
+      .catch((err) => {
+        console.error("FAILED:((((", err);
+      });
+  }
 });
