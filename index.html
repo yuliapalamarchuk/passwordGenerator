@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <h1 class="title">PASSWORD GENERATOR</h1>
+    <div class="password-generator container">
+        <form action="" class="password-generator__form">
+            <input type="text" class="password-generator__input" id="passwordInput" />
+            <span class="material-symbols-outlined password-generator__copy-sign"> content_copy </span>
+        </form>
+    </div>
+    <div class="settings container">
+        <div class="settings__item">
+            <p class="settings__label">Character length</p>
+            <div class="settings__value" id="rangeValue">4</div>
+        </div>
+        <div class="settings__slider">
+            <input type="range" min="4" max="20" value="4" id="range" />
+        </div>
+        <form class="settings__options">
+            <label>
+                <input type="checkbox" class="settings__option-checkbox" data-chars="ABCDEFGHIJKLMNOPQRSTUVWXYZ" checked />
+                Include Uppercase letters
+            </label>
+            <label>
+                <input type="checkbox" class="settings__option-checkbox" data-chars="abcdefghijklmnopqrstuvwxyz" />
+                Include Lowercase letters
+            </label>
+            <label>
+                <input type="checkbox" class="settings__option-checkbox" data-chars="1234567890" />
+                Include Numbers
+            </label>
+            <label>
+                <input type="checkbox" class="settings__option-checkbox" data-chars="!@#$%^&*()_+[]{}|;:,.<>?" />
+                Include Symbols
+            </label>
+        </form>
+        <div class="settings__strength">
+            <p class="settings__strength-label">STRENGTH</p>
+            <div class="settings__strength-bar">
+                <div class="settings__strength-value"></div>
+                <div class="settings__strength-scale">
+                    <div id="settingsStrengthEl1"></div>
+                    <div id="settingsStrengthEl2"></div>
+                    <div id="settingsStrengthEl3"></div>
+                    <div id="settingsStrengthEl4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="settings__button-wrapper">
+            <button type="button" class="settings__button" id="generateBtn">GENERATE</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

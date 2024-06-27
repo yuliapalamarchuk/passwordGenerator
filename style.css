@@ -1,0 +1,291 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212121;
+  margin-top: 15%;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  text-align: center;
+  color: #20deff;
+  font-family: "Jacques Francois Shadow", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.password-generator {
+  display: flex;
+  justify-content: center;
+  background-color: #4bd6f3b0;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+.password-generator__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 40px;
+}
+.password-generator__input {
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  border: transparent;
+}
+/* СТИЛИ ДЛЯ ПОЛЗУНКА */
+input[type="range"] {
+  height: 10px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 2px 2px 3px #736e6e;
+  background: #000000;
+  border-radius: 5px;
+  border: 0px solid #000000;
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #886464;
+  border: 1px solid #ffffff;
+  height: 20px;
+  width: 20px;
+  border-radius: 29px;
+  background: #1c8899;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #000000;
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 2px 2px 3px #736e6e;
+  background: #000000;
+  border-radius: 5px;
+  border: 0px solid #000000;
+}
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #886464;
+  border: 1px solid #ffffff;
+  height: 20px;
+  width: 20px;
+  border-radius: 29px;
+  background: #4bd6f3b0;
+  cursor: pointer;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: #000000;
+  border: 0px solid #000000;
+  border-radius: 29px;
+  box-shadow: 2px 2px 3px #736e6e;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #000000;
+  border: 0px solid #000000;
+  border-radius: 29px;
+  box-shadow: 2px 2px 3px #736e6e;
+}
+input[type="range"]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #886464;
+  border: 1px solid #ffffff;
+  height: 20px;
+  width: 20px;
+  border-radius: 29px;
+  background: #4bd6f3b0;
+  cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: #000000;
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: #000000;
+}
+/* СТИЛИ ДЛЯ ЧЕКБОКСОВ */
+
+input[type="checkbox"] {
+  appearance: none;
+  background: #1797a0;
+  border: 2px solid #415674;
+  height: 1.5em;
+  width: 1.5em;
+  margin-right: 10px;
+  border-radius: 0;
+  vertical-align: text-bottom;
+  position: relative;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  top: 0;
+}
+
+input[type="checkbox"]:checked::before {
+  border-right: 3px solid #191c22;
+  border-bottom: 2px solid #020202;
+  height: 110%;
+  width: 55%;
+  transform: rotate(50deg) translateY(-20%) translateX(-10%);
+}
+
+/* input[type="checkbox"]:focus {
+  outline: solid 1px;
+  outline-offset: 2px;
+} */
+
+.password-generator__copy-sign {
+  cursor: pointer;
+}
+
+.settings {
+  background-color: #4bd6f3b0;
+  padding: 30px;
+  border-radius: 12px;
+}
+.settings__item {
+  display: flex;
+  justify-content: space-between;
+  max-width: 98%;
+}
+.settings__label {
+  font-size: 20px;
+  font-family: "Josefin Slab", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.settings__value {
+  font-size: 22px;
+  font-family: "Josefin Slab", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.settings__slider {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.settings__slider input {
+  width: 100%;
+  cursor: pointer;
+}
+.settings__options {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.settings__options label {
+  font-size: 19px;
+  font-family: "Josefin Slab", serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 24px;
+  position: relative;
+}
+
+.settings__option-checkbox {
+  cursor: pointer;
+}
+
+.settings__strength {
+  background-color: #1c899991;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.settings__strength-label {
+  font-size: 18px;
+  font-family: "Josefin Slab", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.settings__strength-bar {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.settings__strength-scale {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  max-width: 55px;
+}
+
+.settings__strength-scale div {
+  width: 8px;
+  height: 20px;
+  border: 1px solid white;
+}
+.settings__button-wrapper {
+}
+.settings__button {
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid rgb(76 255 203 / 66%);
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Josefin Slab", serif;
+  font-weight: 800;
+  font-style: normal;
+  border-radius: 7px;
+}
+
+.settings__button:hover {
+  background-color: #7de6f591;
+  border: 1px solid white;
+}
+
+.settings__strength-easy {
+  background-color: green;
+}
+
+.settings__strength-medium {
+  background-color: rgb(225, 255, 55);
+}
+
+.settings__strength-hard {
+  background-color: rgb(255, 0, 0);
+}
