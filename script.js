@@ -12,11 +12,7 @@ const generateBtn = document.querySelector("#generateBtn");
 const passwordInput = document.querySelector("#passwordInput");
 const copySign = document.querySelector(".password-generator__copy-sign");
 const modalCopied = document.querySelector(".modal");
-
-range.addEventListener("input", () => {
-  rangeValue.innerHTML = range.value;
-  updateStrengthTextAndClasses();
-});
+const themeSwitcher = document.querySelector("#themeSwitcher");
 
 function updateStrengthTextAndClasses() {
   const trueCheckBoxes = Array.from(checkBoxes).filter((cb) => cb.checked);
@@ -111,6 +107,15 @@ checkBoxes.forEach((checkBox) => {
 
     updateStrengthTextAndClasses();
   });
+});
+
+range.addEventListener("input", () => {
+  rangeValue.innerHTML = range.value;
+  updateStrengthTextAndClasses();
+});
+
+themeSwitcher.addEventListener("change", function () {
+  document.body.classList.toggle("dark-theme");
 });
 
 document.addEventListener("DOMContentLoaded", () => {
